@@ -1,0 +1,8 @@
+{
+  "name": "temp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "a02f1463"
+}
