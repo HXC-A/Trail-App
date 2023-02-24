@@ -1,0 +1,83 @@
+<ion-header class="ion-header-transparent">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="white" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="image-hero-content">
+
+  <div class="image-hero" style="background: url(../../../../assets/img/t1.jpg)">
+    <div class="image-hero-gradient image-hero-gradient-intense">
+      <div>
+        <p>Laguna Coast Wilderness Park</p>
+        <div class="star-rating">
+          <div>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </div>
+          <span>(351 ratings)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ion-padding container-rounded-top">
+    <ion-segment class="segment-small" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable value="all">
+      <ion-segment-button value="Introduction">
+        <p>Introduction</p>
+      </ion-segment-button>
+      <ion-segment-button value="Location">
+        <p>Location</p>
+      </ion-segment-button>
+      <ion-segment-button value="Hours">
+        <p>Hours</p>
+      </ion-segment-button>
+      <ion-segment-button value="Contact">
+        <p>Contact</p>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <hr class="hr-transparent hr-small">
+
+  <div [ngSwitch]="type">
+    <hr class="hr-transparent hr-small">
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Introduction'" class="text-center">
+        Laguna Coast Wilderness park comprises over 7,000 acres within some of the last remaining coastal canyons of Southern California. <br>
+        Sagebrush and elevation gains define much of the landscape, as well as a vast network of tamped-down hiking trails. <br>
+        And any one of these routes through the wilderness park transports hikers far from the hustle and bustle of the region.
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Location'" class="text-center">
+        18751 Laguna Canyon Road,<br>
+        Laguna Beach, CA, 92651,<br>
+        United States
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Hours'" class="text-center">
+        Sun - Sat: 7:00 AM - Sunset<br>
+        8:00 AM - 5:00 PM Parking Lot Hours
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Contact'" class="text-center">
+        Phone: 949-923-2235<br>
+        Email: lagunacoast@ocparks.com
+      </ion-text>
+    </div>
+
+  </div>
+
+
+</ion-content>

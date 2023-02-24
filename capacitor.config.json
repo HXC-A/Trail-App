@@ -1,6 +1,7 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "temp",
+	"appName": "Deliver-it",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"ios": { "scheme": "App" }
 }

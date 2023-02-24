@@ -1,0 +1,84 @@
+<ion-header class="ion-header-transparent">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="white" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="image-hero-content">
+
+  <div class="image-hero" style="background: url(../../../../assets/img/t2.jpg)">
+    <div class="image-hero-gradient image-hero-gradient-intense">
+      <div>
+        <p>The Jeffrey Open Space Trail</p>
+        <div class="star-rating">
+          <div>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </div>
+          <span>(411 ratings)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ion-padding container-rounded-top">
+    <ion-segment class="segment-small" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable value="all">
+      <ion-segment-button value="Introduction">
+        <p>Introduction</p>
+      </ion-segment-button>
+      <ion-segment-button value="Location">
+        <p>Location</p>
+      </ion-segment-button>
+      <ion-segment-button value="Hours">
+        <p>Hours</p>
+      </ion-segment-button>
+      <ion-segment-button value="Contact">
+        <p>Contact</p>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <hr class="hr-transparent hr-small">
+
+  <div [ngSwitch]="type">
+    <hr class="hr-transparent hr-small">
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Introduction'" class="text-center">
+        The Jeffrey Open Space Trail (JOST), the product of extensive community input and consensus, is a unique resource for the residents of the City of Irvine. <br>
+        This open space corridor constitutes an important element in the City's overall open space system, linking the conservation and open space lands within the City. <br>
+        The trail currently stretches 3.5 miles through the City of Irvine.<br>
+        The 1.5-mile extension will run from Barranca to I-5, and will link existing bike and pedestrian trails, include a 15-footwide bridge stretching almost <br>
+        1,200 feet over the Interstate 5, and connect the coastline to the Santa Ana Mountains and Cleveland National Forest.<br>
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Location'" class="text-center">
+        Jeffrey Road, Portola to I-5,<br>
+        Irvine, CA,<br>
+        United States
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Hours'" class="text-center">
+        Irvine Open Space Preserve trail closures may periodically occur due to weather conditions, such as Red Flag Days or rain.<br>
+        For the most up-to-date information on trail closures due to weather, call 949-385-1891 or visit letsgooutside.org(link is external).
+      </ion-text>
+    </div>
+
+    <div class="intro">
+      <ion-text *ngSwitchCase="'Contact'" class="text-center">
+        Phone: 949-724-6600<br>
+      </ion-text>
+    </div>
+
+  </div>
+
+
+</ion-content>

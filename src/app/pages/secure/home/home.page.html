@@ -1,0 +1,89 @@
+<ion-header collapse="fade" [translucent]="true" class="custom-header">
+  <ion-toolbar>
+    <div slot="secondary" class="slot-left">
+      <div class="toolbar-location-dropdown">
+        <span>Your location<ion-icon name="chevron-down-outline"></ion-icon></span>
+        <p>Irvine</p>
+      </div>
+    </div>
+    <div slot="primary" class="slot-right">
+      <ion-avatar>
+        <img src="../../../../assets/img/petr.png" />
+      </ion-avatar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+    <h1 class="ion-margin-top">How are you today?</h1>
+  </div>
+
+  <swiper class="swiper-categories ion-margin-top-small" #swiper [config]="swiper_categories_config">
+    <ng-template swiperSlide *ngFor="let category of categories">
+      <ion-card button class="ion-no-margin ion-no-padding">
+        <ion-card-content>
+          <span>{{category.icon}}</span>
+          <h2>{{category.name}}</h2>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+  <hr class="hr-transparent hr-medium">
+
+  <div class="ion-padding-horizontal ion-margin-bottom ion-margin-top">
+    <h2>Popular trails</h2>
+  </div>
+
+  <swiper class="swiper-trails ion-margin-top-small" #swiper [config]="swiper_categories_trails">
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding" routerLink="/trails/laguna"
+        style="background: url(../../../../assets/img/t1.jpg)">
+        <ion-card-header>
+          <ion-card-subtitle>&nbsp;</ion-card-subtitle>
+          <ion-card-title>&nbsp;</ion-card-title>
+        </ion-card-header>
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <span>🦶</span>Hiking Trails
+          </p>
+        </div>
+        <ion-card-content>
+          <div>
+            <h2>Laguna Coast Wilderness Park</h2>
+          </div>
+          <ion-badge class="ion-no-padding">
+            <ion-icon class="ion-margin-right-small" color="white" name="star"></ion-icon>
+            <ion-label color="white">4.6</ion-label>
+          </ion-badge>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding" routerLink="/trails/jost"
+        style="background: url(../../../../assets/img/t2.jpg)">
+        <ion-card-header>
+          <ion-card-subtitle>&nbsp;</ion-card-subtitle>
+          <ion-card-title>&nbsp;</ion-card-title>
+        </ion-card-header>
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <span>🚴</span>Biking Trails
+          </p>
+        </div>
+        <ion-card-content>
+          <div>
+            <h2>The Jeffrey Open Space Trail</h2>
+          </div>
+          <ion-badge class="ion-no-padding">
+            <ion-icon class="ion-margin-right-small" color="white" name="star"></ion-icon>
+            <ion-label color="white">4.8</ion-label>
+          </ion-badge>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+</ion-content>

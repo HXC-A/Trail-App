@@ -1,18 +1,41 @@
 import { Component } from '@angular/core';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { StatusBar, Style } from '@capacitor/status-bar';
+import { Capacitor } from '@capacitor/core';
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
-  ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+
+  constructor(
+    private platform: Platform
+  ) {
+    this.initializeApp();
+  }
+
+  // Initialize app
+  initializeApp() {
+
+    // Wait until platform is ready
+    this.platform.ready().then(async () => {
+
+      // If we're on a mobile platform (iOS / Android), not web
+      if (Capacitor.getPlatform() !== 'web') {
+
+        // Set StatusBar style (dark / light)
+        await StatusBar.setStyle({ style: Style.Light });
+      }
+
+      // Fake timeout since we do not load any data
+      setTimeout(async () => {
+
+        // Hide SplashScreen
+        await SplashScreen.hide();
+      }, 2000);
+    });
+  }
 }

@@ -1,8 +1,7 @@
 {
-  "name": "temp",
+  "name": "Deliver-it",
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular",
-  "id": "a02f1463"
+  "type": "angular"
 }
