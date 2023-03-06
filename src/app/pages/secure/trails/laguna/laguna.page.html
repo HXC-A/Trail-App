@@ -27,18 +27,18 @@
   </div>
 
   <div class="ion-padding container-rounded-top">
-    <ion-segment class="segment-small" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable value="all">
+    <ion-segment class="segment-small" [(ngModel)]="type" scrollable value="all">
       <ion-segment-button value="Introduction">
         <p>Introduction</p>
       </ion-segment-button>
       <ion-segment-button value="Location">
         <p>Location</p>
       </ion-segment-button>
-      <ion-segment-button value="Hours">
-        <p>Hours</p>
-      </ion-segment-button>
       <ion-segment-button value="Contact">
         <p>Contact</p>
+      </ion-segment-button>
+      <ion-segment-button value="Favourite">
+        <p>Favourite</p>
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -64,9 +64,14 @@
     </div>
 
     <div class="intro">
-      <ion-text *ngSwitchCase="'Hours'" class="text-center">
-        Sun - Sat: 7:00 AM - Sunset<br>
-        8:00 AM - 5:00 PM Parking Lot Hours
+      <ion-text *ngSwitchCase="'Favourite'" class="text-center">
+        <ion-item detail="false">
+          <ion-icon slot="start" color="medium" name="heart-outline"></ion-icon>
+          <ion-label>
+            <h3>Add to Favourite</h3>
+          </ion-label>
+          <ion-toggle slot="end" checked></ion-toggle>
+        </ion-item>
       </ion-text>
     </div>
 

@@ -1,0 +1,103 @@
+<ion-header collapse="fade" [translucent]="true" class="custom-header">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button color="secondary">
+        <img class="language-flag" src="../../../../assets/img/united-states.png">
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <p>Settings</p>
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="hero hero-light-gradient">
+    <ion-avatar>
+      <img src="../../../../assets/img/petr.png">
+    </ion-avatar>
+    <p class="font-weight-500 ion-margin-top-medium">Peter Anteater</p>
+    <ion-text color="medium">
+      <small>PeterAnteater@uci.edu</small>
+    </ion-text>
+  </div>
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>Personal</ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom items-no-horizontal-padding" lines="full">
+      <ion-item button>
+        <ion-icon slot="start" color="medium" name="person-circle-outline"></ion-icon>
+        <ion-label>
+          <h3>Account settings</h3>
+          <p class="list-description ion-text-wrap">Set name, password and more.</p>
+        </ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon slot="start" color="medium" name="wallet-outline"></ion-icon>
+        <ion-label>
+          <h3>Payment method</h3>
+          <p class="list-description ion-text-wrap">Setup your payments.</p>
+        </ion-label>
+        <ion-note slot="end" color="medium">Apple Pay</ion-note>
+      </ion-item>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>About</ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom items-no-horizontal-padding" lines="full">
+      <ion-item button>
+        <ion-icon slot="start" color="medium" name="chatbox-ellipses-outline"></ion-icon>
+        <ion-label>
+          <h3>Help</h3>
+          <p class="list-description ion-text-wrap">Find our FAQs and contact options.</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>Notifications</ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom items-no-horizontal-padding" lines="full">
+      <ion-item detail="false">
+        <ion-icon slot="start" color="medium" name="fitness-outline"></ion-icon>
+        <ion-label>
+          <h3>Recommendations</h3>
+        </ion-label>
+        <ion-toggle slot="end" checked></ion-toggle>
+      </ion-item>
+      <ion-item detail="false">
+        <ion-icon slot="start" color="medium" name="ear-outline"></ion-icon>
+        <ion-label>
+          <h3>Reminders</h3>
+        </ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+      <ion-item detail="false">
+        <ion-icon slot="start" color="medium" name="flashlight-outline"></ion-icon>
+        <ion-label>
+          <h3>Product Updates & News</h3>
+        </ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

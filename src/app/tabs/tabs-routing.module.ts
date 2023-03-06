@@ -11,18 +11,18 @@ const routes: Routes = [
         path: 'home',
         loadChildren: () => import('../pages/secure/home/home.module').then(m => m.HomePageModule)
       },
-      // {
-      //   path: 'favorites',
-      //   loadChildren: () => import('../pages/secure/favorites/favorites.module').then( m => m.FavoritesPageModule)
-      // },
-      // {
-      //   path: 'settings',
-      //   loadChildren: () => import('../pages/secure/settings/settings.module').then( m => m.SettingsPageModule)
-      // },
-      // {
-      //   path: 'explore',
-      //   loadChildren: () => import('../pages/secure/explore/explore.module').then( m => m.ExplorePageModule)
-      // }
+      {
+        path: 'favorites',
+        loadChildren: () => import('../pages/secure/favorites/favorites.module').then( m => m.FavoritesPageModule)
+      },
+      {
+        path: 'settings',
+        loadChildren: () => import('../pages/secure/settings/settings.module').then( m => m.SettingsPageModule)
+      },
+      {
+        path: 'explore',
+        loadChildren: () => import('../pages/secure/explore/explore.module').then( m => m.ExplorePageModule)
+      }
     ]
   }
 ];

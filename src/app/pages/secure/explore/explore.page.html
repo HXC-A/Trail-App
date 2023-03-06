@@ -1,0 +1,156 @@
+<ion-header collapse="fade" [translucent]="true" class="custom-header">
+  <ion-toolbar>
+    <ion-title>
+      <p>Trails nearby</p>
+      <span>4115 Campus Dr, Irvine, CA 92612</span>
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <hr class="hr-transparent hr-small">
+
+  <div class="ion-padding-horizontal ion-margin-bottom-medium">
+
+    <ng-container *ngIf="content_loaded">
+      <ion-card class="ion-no-margin ion-margin-bottom-large custom-card animate__animated animate__fadeIn" routerLink="/trails/laguna">
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <ion-icon name="stats-chart-outline"></ion-icon>Most popular
+          </p>
+        </div>
+        <div class="card-img-header" style="background: url(../../../../assets/img/t1.jpg)"></div>
+        <ion-card-content>
+          <div class="custom-card-content-title">
+            <p>Laguna Coast Wilderness Park</p>
+            <div class="custom-card-content-rating">
+              <ion-badge class="custom-badge ion-no-padding" color="white">
+                <ion-icon class="ion-margin-right-small" color="secondary" name="star"></ion-icon>
+                <ion-label color="secondary">4.6</ion-label>
+              </ion-badge>
+            </div>
+          </div>
+          <span class="custom-card-content-description">Hiking · Biking · Equestrian</span>
+          <div class="list-chips list-chips-smallest">
+            <ion-chip color="secondary">
+              <ion-icon name="hourglass"></ion-icon>
+              <ion-label>14 min</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="ion-no-margin ion-margin-bottom-large custom-card animate__animated animate__fadeIn" routerLink="/trails/jost">
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <ion-icon name="stats-chart-outline"></ion-icon>Most popular
+          </p>
+        </div>
+        <div class="card-img-header" style="background: url(../../../../assets/img/t2.jpg)"></div>
+        <ion-card-content>
+          <div class="custom-card-content-title">
+            <p>The Jeffrey Open Space Trail</p>
+            <div class="custom-card-content-rating">
+              <ion-badge class="custom-badge ion-no-padding" color="white">
+                <ion-icon class="ion-margin-right-small" color="secondary" name="star"></ion-icon>
+                <ion-label color="secondary">4.8</ion-label>
+              </ion-badge>
+            </div>
+          </div>
+          <span class="custom-card-content-description">Hiking · Biking · Urban</span>
+          <div class="list-chips list-chips-smallest">
+            <ion-chip color="secondary">
+              <ion-icon name="hourglass"></ion-icon>
+              <ion-label>16 min</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="ion-no-margin ion-margin-bottom-large custom-card animate__animated animate__fadeIn">
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+          <ion-icon name="diamond-outline"></ion-icon>New in town
+          </p>
+        </div>
+        <div class="card-img-header" style="background: url(../../../../assets/img/t3.jpg)"></div>
+        <ion-card-content>
+          <div class="custom-card-content-title">
+            <p>Newport Beach Back Bay Loop Trail</p>
+            <div class="custom-card-content-rating">
+              <ion-badge class="custom-badge ion-no-padding" color="white">
+                <ion-icon class="ion-margin-right-small" color="secondary" name="star"></ion-icon>
+                <ion-label color="secondary">4.4</ion-label>
+              </ion-badge>
+            </div>
+          </div>
+          <span class="custom-card-content-description">Hiking · Biking · Beach</span>
+          <div class="list-chips list-chips-smallest">
+            <ion-chip color="secondary">
+              <ion-icon name="hourglass"></ion-icon>
+              <ion-label>12 min</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="ion-no-margin ion-margin-bottom-large custom-card animate__animated animate__fadeIn">
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <ion-icon name="trophy-outline"></ion-icon>Top 10 Trail
+          </p>
+        </div>
+        <div class="card-img-header" style="background: url(../../../../assets/img/t4.jpg)"></div>
+        <ion-card-content>
+          <div class="custom-card-content-title">
+            <p>Turtle Ridge Trail</p>
+            <div class="custom-card-content-rating">
+              <ion-badge class="custom-badge ion-no-padding" color="white">
+                <ion-icon class="ion-margin-right-small" color="secondary" name="star"></ion-icon>
+                <ion-label color="secondary">4.5</ion-label>
+              </ion-badge>
+            </div>
+          </div>
+          <span class="custom-card-content-description">Hiking · Biking · Running</span>
+          <div class="list-chips list-chips-smallest">
+            <ion-chip color="secondary">
+              <ion-icon name="hourglass"></ion-icon>
+              <ion-label>13 min</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="ion-no-margin ion-margin-bottom-large custom-card animate__animated animate__fadeIn">
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <ion-icon name="trophy-outline"></ion-icon>Top 3 Trail
+          </p>
+        </div>
+        <div class="card-img-header" style="background: url(../../../../assets/img/t5.jpg)"></div>
+        <ion-card-content>
+          <div class="custom-card-content-title">
+            <p>Bommer Canyon</p>
+            <div class="custom-card-content-rating">
+              <ion-badge class="custom-badge ion-no-padding" color="white">
+                <ion-icon class="ion-margin-right-small" color="secondary" name="star"></ion-icon>
+                <ion-label color="secondary">4.7</ion-label>
+              </ion-badge>
+            </div>
+          </div>
+          <span class="custom-card-content-description">Hiking · Mountain Biking · Equestrian</span>
+          <div class="list-chips list-chips-smallest">
+            <ion-chip color="secondary">
+              <ion-icon name="hourglass"></ion-icon>
+              <ion-label>8 min</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+
+  </div>
+
+</ion-content>
